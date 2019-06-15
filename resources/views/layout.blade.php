@@ -73,6 +73,11 @@
         </style>
     </head>
     <body>
+        @if(Session::has('success'))
+            <div class="container alert alert-success col-lg-6 pt-4 pb-4" role="alert" style="margin-bottom:30px;">
+                {{Session::get('success')}}
+            </div>
+        @endif
         @yield('content')
     </body>
 </html>
