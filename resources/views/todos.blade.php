@@ -22,18 +22,18 @@
             <div class="row">
                 <div class="col-lg-1 mr-3">
                     @if(!$todo->completed)
-                        <a href="{{ route('todo.completed', [ 'id' => $todo->id]) }}" class="btn btn-xs btn-success" style="height=20px;">Mark as completed</a>
+                        <a href="{{ route('todo.completed', [ 'id' => $todo->id]) }}" class="btn btn-xs btn-success" style="height=20px;">completed</a>
                     @endif
                     @if($todo->completed)
                         <h5 style="color:green;">Completed</h5>
                     @endif
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-8 pl-5 pt-2">
                     <h5>{{ substr($todo->todo, 0, 80) }}...</h5>
                 </div> 
                 <div class="col-lg-2">
-                    <a href="{{route('todo.delete', ['id' => $todo->id])}}" class="btn btn-danger" style="height=20px;">Delete</a>
-                    <a href="{{route('todo.update', ['id' => $todo->id])}}" class="btn btn-primary" style="height=20px;">update</a>
+                    <a href="{{route('todo.delete', ['id' => $todo->id])}}" class="btn btn-danger p-2 m-1" style="height=20px;">Delete</a>
+                    <a href="{{route('todo.update', ['id' => $todo->id])}}" class="btn btn-primary p-2 m-1" style="height=20px;">update</a>
                 </div>
             </div>
         <hr>
